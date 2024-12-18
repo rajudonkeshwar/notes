@@ -9,7 +9,7 @@ clear
 
 $ --> denotes normal user
 sudo su --> root access
-# --> denotes admin/root user
+\# --> denotes admin/root user
 
 /home/<user-name>
 
