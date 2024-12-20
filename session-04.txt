@@ -67,3 +67,4 @@ systemctl restart sshd
 sshd -t --> check config is correct or not
 
 key based authentication --> ramesh should generate his public key and private key...
+
