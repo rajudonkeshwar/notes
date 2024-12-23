@@ -1,0 +1,93 @@
+3 tier architecture
+====================
+
+Desktop applications
+Web applications
+
+disadvatanges of Desktop applications
+====================================
+1. installation
+2. upgrade
+3. storage
+4. compatability
+5. if system crash we will lose data
+6. more system resources
+
+Web applications
+=======================
+
+road side cart
+=================
+1 person --> 10 persons
+
+1. cooking
+2. bill collection
+3. serving
+4. queing
+
+hotel
+==================
+50 people --> He will hire extra resources
+
+2 persons --> 50 people
+
+1 cook --> cooking and serving
+1 owner --> tokens issue, bill collection
+
+500 people --> restaurant
+
+1 captain --> welcome and show the table
+waiter --> take the order, plating
+chef --> cook the order
+
+1. responsibilites are shared to everyone, they can focus only on their work.
+2. security
+3. queing
+
+Raw Items --> Cook(customers can eat) --> Plating(with onion and keera)
+
+Only one server --> DB, Java Application, HTML application
+
+CRUD --> create, read, update and delete
+
+email, name, pan card, card details
+
+users --> table --> RDBMS
+
+DB --> Raw data
+Application Server --> Connects to DB and do CRUD operations
+Web Server --> queue the requests, take the request, forward the request to application serverr, format the data
+
+DB Tier --> RDBMS(MySQL, Oracle, Postgress, etc.), NoSQL(MongoDB), Redis(Cache), RabbitMQ(Queue based)
+Application/API(Application programming interface) Tier --> Backend/middleware applications --> Java, .NET, Python, Go, NodeJS, etc..
+
+{
+	"username": "sivakumar",
+	"dob": "01-JAN-2000",
+	"address": "Sanath nagar, HYD, 543234"
+}
+
+Web(Frontend tier) tier --> Load Balancer, Frontend Servers -> HTML, CSS and JS, ReactJS, AngularJS, 
+
+MERN --> MongoDB, ExpressJS, ReactJS, NodeJS
+
+devops-practice --> joindevops(RHEL9 based) --> ec2-user, DevOps321
+
+Linux Server --> Physical Server
+
+show databases; --> dispays the schema/database available
+use <database-name>; --> you are using that schema
+show tables; --> display all the tables in the  schema
+select * from table-name; --> display the data inside table
+
+#include <stdio.h> --> our programming depends on this... so these are called as dependencies/libraries
+
+NodeJS --> package.json(build file) (contains dependencies/libraries required by NodeJS)
+Java --> pom.xml --> project version, description, dependencies/libraries mvn pacakge
+.NET --> msbuild --> project version, description, dependencies/libraries
+requirements.txt --> project version, description, dependencies/libraries pip install
+Makefile --> C language --> make
+
+dnf install nginx --> systemcl start nginx
+
+service --> it should run continously --> /etc/systemd/system --> create a .service file
