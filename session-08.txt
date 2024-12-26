@@ -1,0 +1,104 @@
+What is DNS?
+How DNS works?
+
+public IP --> stop and start change in IP
+private IP --> but when terminate and recreate private IP changes
+
+human names, computers numbers
+
+whenever backend IP changes, I should edit systemctl file. deamon reload and restart the service
+
+word = meaning
+name = number
+facebook = IP
+
+ICANN --> Internet Corporation for assigned names and numbers --> countries, reputed organistions
+
+there are 13 servers in the world
+
+top level domains
+.telugu , .com , .in , .uk, .net, .edu, .gov, .us, .au, .org, .ai, .online
+
+.gov.in, .co.in --> sub level domain
+
+ICANN --> I am going to start .telugu domain. I need to complete all the process
+
+joindevops.telugu
+tfc.telugu
+
+domain registars(mediators) --> godaddy, hostinger, aws, gcp, azure
+
+joindevops --> joindevops.com(not available), try joindevops.telugu
+
+someone registered joindevops.telugu
+
+Hostinger updates Radix Registry about daws82s.online --> who bought this domain and nameservers
+
+nameservers = who managed this domain = records to the DNS
+
+A record = IP address
+
+change in NS --> Hostinger updates the change of Nameservers to .online TLD
+now aws manages my domain
+
+mysql.daws82s.online --> DNS resolver --> .online TLD --> provides nameservers to daws82s.online --> mysql.daws82s.online A record
+
+Record types
+=============
+A --> points to IP address
+CNAME --> points to another domain
+MX --> mail records (info@joindevops.com)
+TXT --> Domain ownership validaton purpose
+NS --> nameservers
+SOA --> who is the authority of this domain
+
+What happens when we book domain?
+What happens when someone enter our domain in browser?
+How to become TLD?
+
+[Unit]
+Description = Backend Service
+
+[Service]
+User=expense
+Environment=DB_HOST="mysql.daws81s.online"
+ExecStart=/bin/node /app/index.js
+SyslogIdentifier=backend
+
+[Install]
+WantedBy=multi-user.target
+
+
+proxy_http_version 1.1;
+
+location /api/ { proxy_pass http://backend.daws81s.online:8080/; }
+
+location /health {
+  stub_status on;
+  access_log off;
+}
+
+http://daws81s.online/api/transaction
+
+http://backend.daws81s.online:8080/transaction
+
+
+http://daws81s.online/api/transaction --> send request to backend --> backend responds with data
+
+inode, symlink/softlink and hardlink
+
+what is inode?
+
+inode stores the file type(file or folder), permissions, ownership, file size, timestamp, disk location(memory location)
+
+lrwxrwxrwx  1 root root    11 Dec 26 03:10 DbConfig1.js -> DbConfig.js
+l represents link file
+
+symlink is like shortcut it points to the original file. symlink inode and actual file inode is different. symlink breaks when actual file is deleted. symlink can be created to folders/directories
+
+hardlink inode is same as actual file. hardlink is useful for backup of the file. if original file is deleted hardlink remains same. we can't create hardlinks to folders/directories
+
+how do you findout hardlinks for a particular file?
+
+find / -inum "<inode-number>"
+
