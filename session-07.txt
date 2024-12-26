@@ -1,0 +1,62 @@
+systemctl service?
+
+if you want your applications to run as a service, create a file with extension .service in /etc/systemd/system
+
+vim /etc/systemd/system/backend.service
+
+[Unit]
+Description = Backend Service
+
+[Service]
+User=expense
+Environment=DB_HOST="172.31.85.250"
+ExecStart=/bin/node /app/index.js
+SyslogIdentifier=backend
+
+[Install]
+WantedBy=multi-user.target
+
+browser: 49.204.161.202 --> public IP
+cmd: 192.168.0.107 --> private IP
+
+
+Nginx --> popular webserver and reverse proxy server
+
+proxy --> forward proxy and reverse proxy
+
+VPN forward proxy
+==========
+Server is not aware that client is using VPN. Client is aware of VPN
+Traffic restrict, traffic monitoring
+Geolocation hiding
+Anonymous client  identity
+Access private network/files
+
+Reverse proxy
+===========
+Client is not aware of proxy. Server is aware of proxy.
+Backend applications are behind reverse proxy servers for security and queing
+Cache servers
+
+Public IP vs Private IP
+Reverse proxy vs Forward proxy
+
+nginx home directory: /etc/nginx
+html directory: /usr/share/nginx/html
+nginx configuration: /etc/nginx/nginx.conf
+
+0-65,535 = 65,536 ports
+
+
+proxy_http_version 1.1;
+
+location /api/ { proxy_pass http://172.31.88.35:8080/; }
+
+location /health {
+  stub_status on;
+  access_log off;
+}
+
+JoinDevOps AMI
+
+https://github.com/learndevopsonline/aws-image-devops-session.git
