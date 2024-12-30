@@ -1,0 +1,81 @@
+Git --> Concept
+GitHub
+Gitlab
+Bitbucket
+azure repos
+AWS Code commit
+
+git repos --> Storing code
+
+1. creation of repo
+2. clone repo to our laptop
+git clone https://github.com/daws-78s/shell-script/blob/main/06-array.sh
+3. we develop code
+4. select some editor. vscode editor. visual studio code editor. free editor
+5. add code to staging area
+
+git add <file-name>
+git add . --> all files will be added to staging area
+
+6. commit to local repo
+
+git commit -m "message"
+
+7. git push oigin main
+
+SVN --> Sub version control --> Centralised
+
+Centralised vs Decentralised
+
+easy to collapse if at one place
+
+Decentralised --> Distributed economy, if one collpase no problem to country
+
+Version Control
+================
+History of changes
+Need to maintain multiple versions --> I need to track the changes --> Why I changed? When I changed? Who changed?
+
+20-DEC-2024 We deployed app in prodction
+21-DEC-2024 there is issue
+
+19-DEC-2024 --> restore to this version
+
+Colloboration
+
+
+.sh --> shell script extension
+
+C shell, K Shell, Z Shell, Shell --> Bash
+
+#!/bin/bash, #/bin/sh
+
+Shebang --> It should be the first line of shell script. It is the interpreter to execute the commands  and syntax inside shell script
+
+which ls
+/bin/ls
+
+sh <script-name>
+bash <script-name>
+
+variables
+================
+lets take x=1, y=0
+
+derive the formual
+finally submit values
+
+a centralise place to mention the values, if you change at one place, it will reflect at all the places where it is referred
+
+DRY == Don't repeat yourself
+
+1. variables
+2. data types
+3. conditions
+4. loops
+5. functions
+
+arguements or args --> run time variables -> no need to edit script
+
+sh 04-variables.sh ramesh suresh
+
