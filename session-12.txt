@@ -1,0 +1,72 @@
+Functions
+
+takes some input and do something
+
+DRY --> Don't repeat yourself
+
+repeated code we can keep in function, give it a name. Whenever you want you can call that function
+
+FUNC_NAME(){
+
+	code related to function
+}
+
+FUNC_NAME # calling function
+
+args --> sh script-name.sh arg1 arg2 --> $1=arg1 $2=arg2
+
+FUNC_NAME input1 input2
+
+FUNC_NAME(){
+	$1=input1
+	$2=input2
+	code related to function
+}
+
+What it knows and what it does?
+
+Colors --> success(green), failure(red), already installed(yellow)
+
+R --> 31
+G --> 32
+Y --> 33
+
+\e[31m
+
+logs --> logging the result to some file
+
+redirectors
+
+< --> input
+> --> output
+
+1 --> success
+2 --> failure
+& --> both success and failure
+
+/var/logs/shellscirpt-logs/13-logs.sh.log
+
+script-name.log
+
+13-logs.sh --> 13-logs
+13-logs-01-01-2025.log
+
+variables
+data types
+conditions
+functions
+loops
+
+for(int i=0; i<100; i++){
+	print $i
+}
+
+for i in {0..1000}
+do
+	echo $i
+done
+
+sh install-script git mysql gcc nginx
+
+package=git
+package=mysql
