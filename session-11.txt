@@ -1,0 +1,112 @@
+int i=0
+var i=0
+boolean
+
+integer, float, boolean, string, array, arraylist, map, etc..
+
+integer --> number
+float --> decimal number
+boolean --> true/false
+string --> text
+array --> (devops, aws, docker)
+arraylist --> [devops, aws, docker]
+map --> name: devops, duration: 120hrs
+
+
+addition of 2 numbers
+=====================
+user must give number1 and number2
+
+add them, print the sum
+
+how do you run a command inside shell script and get the output
+$(date)
+
+list of values
+
+MOVIES=("pushpa" "rrr" "devara")
+            0      1       2
+size is 3...
+
+
+Special variables
+======================
+$1, $2, $3
+All variables passed: $@
+number of variables: $#
+script name: $0
+present working directory: $PWD
+home directory of current user: $HOME
+which user is running this script: $USER
+process id of current script: $$
+process id of last command in background: $!
+
+
+Conditions
+======================
+
+print holiday or not
+
+1. I need to find what is today
+2. if today is not sunday, I have to go school
+3. otherwise today is holiday
+
+
+print a number is greater than 100 or not
+
+1. get the input number
+2. check it is more than 100 or not
+3. if more than 100, print more than 100
+4. otherwise print less than or equal to 100
+
+if(expression){
+	execute this if expression is true
+}
+
+
+if(expression){
+	execute this if expression is true
+}
+else{
+	execute this if expression is false
+}
+
+if [ expression ]
+then
+	statements
+else
+	statements
+fi
+
+>
+
+install mysql through shell script
+==================================
+dnf install mysqlll -y
+
+check if the user running the script is root user or not
+if root user
+	allow him
+else
+	show the error properly and exit the script
+run install command
+check installation is success
+if success, our task is done
+if not success, throw the error message
+
+exit status
+=============
+How can you check previous command is success or not in shell script?
+
+by checking the exit status, if exit status is 0 it is success, otherwise it is failure
+
+$?
+
+20 things to fill
+
+reduce number of lines, get the same productivity
+
+<
+
+mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pExpenseApp@1 < /app/schema/backend.sql
+
