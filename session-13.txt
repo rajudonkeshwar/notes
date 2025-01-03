@@ -1,0 +1,52 @@
+variables
+data types
+conditions
+functions
+loops
+
+plain server --> app runtime(nodejs), create user, create app folder, download the code, install dependencies, create systemctl services, start the application
+
+check user has root access or not
+store logs
+try to use colors
+
+install mysql server
+enable it
+start it
+set the root password
+
+idempotency --> even you run any number of times, it should not change the result
+
+HTTP GET --> idempotent
+HTTP POST --> chance of duplicates or errors, we need to handle this in programming
+HTTP PUT --> no problem, but we can say it is already updated
+HTTP DELETE --> chance of error, resource not found. Handle this in scripting/programming
+
+deployment --> updating new version
+
+remove old code
+download new code
+install dependencies
+restart the server --> stop and start
+
+delete old logs in linux server
+-------------------------------
+14 days log files --> will be in server
+archive and move to storage servers
+
+delete files older than 14 days from now
+only delete .log files
+
+#!/usr/bin/bash
+
+
+file=temp.txt
+while read -r line;
+do
+    echo $line
+done < “$file”
+
+1. read the file
+2. count the number of words 
+3. find top 5
+
