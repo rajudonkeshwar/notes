@@ -1,0 +1,39 @@
+app --> app logs
+daily schedule few jobs, they run in particular time every, archieve the logs and move it to seperate folder
+
+source directory
+zip the files
+destination directory
+how many days old logs --> optional. If user provides number of days we take them. otherwise we take 14 days by default
+
+1. user may forget to provide source and dest directory. throw the error with proper usage
+2. user may forget one of these 2 parameters. throw the error with proper usage
+3. user may give both. but they may not exist. throw the error with proper usage
+4. find the files
+5. if files are there zip it
+6. if zip success, then remove the files
+
+$# --> number of parameters
+
+find <DIR> -name "*.log" +mtime <days>
+
+if there are files, I can zip. If there are no files. I can't zip
+
+app-logs-$TIMESTAMP.zip
+
+I should check zip is success or not, if success then I should delete the files. if failure I should throw the error
+
+crontab --> schedule the scripts as per your timeline
+*	*	*	*	*
+
+home/ec2-user/shellscript-logs//home/ec2-user/shell-script/18-backup-2025-01-06-02-54-01.log
+
+18-backup.sh
+awk 
+
+ls --> C language
+
+./backup.sh +x
+
+backup -> /bin
+
