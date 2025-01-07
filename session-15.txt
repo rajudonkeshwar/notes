@@ -1,0 +1,30 @@
+I recently developed a backup script for our linux servers. I installed the script in /usr/local/bin and tested in the server. It worked well. So I configured it into crontab. But next day morning when I come to office I checked it is failed..
+
+/home/ec2-user/.local/bin:
+/home/ec2-user/bin:
+/usr/local/bin: --> Customised commands
+/usr/bin: --> System commands for normal user
+/usr/local/sbin: --> Customised super user commands
+/usr/sbin --> System super user commands
+
+/bin --> softlink to /usr/bin.. So keep the commands in /usr/bin
+
+hash -r --> reload the path cache
+
+/usr/bin:/bin
+
+crontab environment is minimal, it is not the same environment as when I run manual
+
+1. monitor linux servers disk usage, send an email if any disk is using more than 80%
+
+from email, to email
+
+joindevops@gmail.com
+lvbhmofihsifwyen
+
+How do you run other scripts from current shell script?
+sh <script-name> it runs in seperate process, cant access variables of script1
+
+source ./script-name
+
+2nd script executes in the process of script-1. so we can access script2 variables also
