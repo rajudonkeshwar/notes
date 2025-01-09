@@ -1,0 +1,27 @@
+variables
+data types
+conditions
+functions
+loops
+
+variable have a name we can define, it can hold value. You can use it wherever you want. if you change the value it will reflect everywhere. it is DRY
+
+COURSE=DevOps
+
+$COURSE or ${COURSE}
+
+vars:
+    COURSE: "DevOps with AWS"
+    DURATION: 120HRS
+    TRAINER: Sivakumar
+	
+
+"{{COURSE}}"
+
+#1. Command line or args
+#2. Task level
+#3. Files
+#4. Prompt
+#5. Play
+#6. Inventory
+#7. Roles
